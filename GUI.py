@@ -74,11 +74,11 @@ def takeInput():
         label1.grid(row=0, column=1, columnspan=6)
         label2 = tkinter.Label(substituteWindow, text="PLEASE VISIT NEAREST CARDIOLOGIST AT THE EARLIEST", font=('Impact', -20), fg='red')
         label2.grid(row=1, column=1, columnspan=6)
-        label3 = tkinter.Label(substituteWindow, text = "Dr. Amjad's Heart & vascular clinic", font=('Times', -15))
+        label3 = tkinter.Label(substituteWindow, text = "TEQIPP -III PROJECT SUPPORTED BY JNTUH", font=('Times', -15))
         label3.grid(row=3, column = 2)
-        label4 = tkinter.Label(substituteWindow, text = "Four Chambers Heart Clinic", font=('Times', -15))
+        label4 = tkinter.Label(substituteWindow, text = "TKRCET", font=('Times', -15))
         label4.grid(row=4, column = 2)
-        label4 = tkinter.Label(substituteWindow, text = "Dr. Mahesh multispeciality hospital", font=('Times', -15))
+        label4 = tkinter.Label(substituteWindow, text = "Dr. A Suresh Rao & Dr. B. Vishnu Vardhan", font=('Times', -15))
         label4.grid(row=5, column = 2)
     else: 
         label1 = tkinter.Label(substituteWindow, text="NO DETECTIOIN OF HEART DISEASES", font=('Impact', -35) )
@@ -89,7 +89,7 @@ def takeInput():
     substituteWindow.mainloop()
         
 
-heart = pd.read_csv("heart.csv")
+heart = pd.read_csv("dataset.csv")
 # we have unknown values '?'
 # change unrecognized value '?' into mean value through the column
 min_max = MinMaxScaler()
@@ -150,7 +150,7 @@ sexFrame.config(font=("Courier", -15))
 sex= tkinter.Entry(sexFrame)
 sex.grid(row=2, column=2, sticky='nw')
 
-chestPainFrame = tkinter.LabelFrame(mainWindow, text="CP (0-4)")
+chestPainFrame = tkinter.LabelFrame(mainWindow, text="DR (0-4)")
 chestPainFrame.grid(row=2, column=2)
 chestPainFrame.config(font=("Courier", -15))
 chestPain= tkinter.Entry(chestPainFrame)
